@@ -13,7 +13,7 @@ fn main() -> anyhow::Result<()> {
     esp_idf_sys::link_patches();
 
     let peripherals = Peripherals::take().unwrap();
-    let mut led = PinDriver::output(peripherals.pins.gpio4)?;
+    let mut led = PinDriver::output_od(peripherals.pins.gpio22)?;
 
     loop {
         led.set_high()?;

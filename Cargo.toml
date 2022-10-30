@@ -38,3 +38,6 @@ anyhow = "1"
 [dev-dependencies]
 anyhow = "1"
 esp-idf-sys = { version = "0.31.10", features = ["native", "binstart"] }
+
+[patch.crates-io]
+embedded-hal = { path = "../embedded-hal/embedded-hal"}
